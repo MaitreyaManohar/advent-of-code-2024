@@ -6,9 +6,8 @@ import (
 	"sort"
 )
 
-
 // Might break if the input is not given in pairs ending with "0 0"
-func TakeInputAndSort() ([]int, []int) {
+func TakeD1InputAndSort() ([]int, []int) {
 	var list1 []int
 	var list2 []int
 	for {
@@ -26,25 +25,24 @@ func TakeInputAndSort() ([]int, []int) {
 	return list1, list2
 }
 
-
-func Part1() int {
-	list1, list2 := TakeInputAndSort()
+func D1Part1() int {
+	list1, list2 := TakeD1InputAndSort()
 	sum := 0
-	for i := range(list1) {
+	for i := range list1 {
 		sum += int(math.Abs(float64(list1[i] - list2[i])))
 	}
 	return sum
 }
 
-func Part2() int {
-	list1, list2 := TakeInputAndSort()
+func D1Part2() int {
+	list1, list2 := TakeD1InputAndSort()
 	sum := 0
 	freqMap := make(map[int]int)
-	for _, val := range(list2) {
-		freqMap[val]++;
+	for _, val := range list2 {
+		freqMap[val]++
 	}
-	for _, val := range(list1) {
-		sum += freqMap[val] * val;
+	for _, val := range list1 {
+		sum += freqMap[val] * val
 	}
 	return sum
 }
