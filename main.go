@@ -8,6 +8,6 @@ import (
 
 // Main function to run any problem or part of problem
 func main() {
-	inputString, _ := solutions.TakeD4Input()
-	fmt.Println(solutions.D4Part2(inputString))
+	inputString, _ := solutions.TakeD5Input()
+	fmt.Println(solutions.D5Part2(inputString))
 }
